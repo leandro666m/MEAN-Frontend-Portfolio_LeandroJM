@@ -1,7 +1,7 @@
 
 <section id="about" class="about">
     <div class="container">
-      <!-- <button *ngIf="isAdmin" class="btn btn-outline-warning" routerLink="" (click)="openAbout(aboutEdit)"> <i class="far fa-edit"> </i> </button>  -->
+       <button  class="btn btn-outline-warning" routerLink="" (click)="openAbout(aboutEdit)"> <i class="far fa-edit"> </i> </button>  -->
    <div *ngFor=" let persona of persona">
         <div class="section-title">
             <h2>Sobre mí</h2>
@@ -71,7 +71,7 @@
   
 
 
-  <!-- 
+
 <ng-template #aboutEdit>
 
   <div class="offcanvas-header">
@@ -119,12 +119,12 @@
       </div>
 
       <div class="col-5 float-end form-group">
-        <button type="submit" class="btn miBoton"  aTilt [tiltSettings]="tiltSettings" > Actualizar </button>
+        <button type="submit" class="btn miBoton"  > Actualizar </button>
       </div>
   </form>
 
 </div>
 
 </ng-template>
- -->
+
 

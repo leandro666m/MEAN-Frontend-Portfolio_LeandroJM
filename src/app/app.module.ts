@@ -8,6 +8,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule, HttpClientModule,
     AppRoutingModule, ToastrModule.forRoot(),
-    NgbModule
+    NgbModule,
+    FormsModule, ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

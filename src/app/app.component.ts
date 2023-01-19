@@ -13,7 +13,7 @@ import { PersonaService } from './Services/persona.service';
 export class AppComponent implements OnInit {
   isAdmin = false;
   roles: string[]=[];
-  persona: Persona[] = [];
+  persona: Persona[] = [];  id: number ;
   
   constructor(public personaServ: PersonaService,private toastr: ToastrService, private router: Router) {}
 

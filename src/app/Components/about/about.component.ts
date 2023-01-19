@@ -13,7 +13,7 @@ import { PersonaService } from 'src/app/Services/persona.service';
 export class AboutComponent implements OnInit {
   //@Input() isAdmin: boolean;
   @Input() persona: any;
-  //@Input() id: number;
+  @Input() id: number;
   
   constructor( public personaServ: PersonaService, public offcanvasService: NgbOffcanvas, private toastr: ToastrService) { }
 
@@ -22,9 +22,9 @@ export class AboutComponent implements OnInit {
   openAbout( aboutEdit: any  ): void{
     this.offcanvasService.open( aboutEdit , { position: 'end'});
   }
-/*
+
   onUpdateAcerca( ): void{
-    this.personaServ.updatePersona( this.id, this.persona ).subscribe(
+    this.personaServ.editarPersona( this.id, this.persona ).subscribe(
       data => { this.toastr.success('Actualizado', '', {timeOut: 3000, positionClass: 'toast-top-center'});
                   this.offcanvasService.dismiss() },
       err => { this.toastr.error(err.error.mensaje, 'Error', {timeOut: 3000,  positionClass: 'toast-top-center', });
@@ -32,7 +32,7 @@ export class AboutComponent implements OnInit {
       }
     );  
   }
-*/
+
 
 }
 
