@@ -7,15 +7,19 @@ import { PersonaService } from './Services/persona.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-
 export class AppComponent implements OnInit {
   isAdmin = false;
-  roles: string[]=[];
-  persona: Persona[] = [];  id: number ;
-  
-  constructor(public personaServ: PersonaService,private toastr: ToastrService, private router: Router) {}
+  roles: string[] = [];
+  persona: Persona[] = [];
+  id: number;
+
+  constructor(
+    public personaServ: PersonaService,
+    private toastr: ToastrService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.cargarPersona();
@@ -23,15 +27,17 @@ export class AppComponent implements OnInit {
   }
 
   public cargarPersona(): void {
-    this.personaServ.getPersona().subscribe(
-      { next: (data) => {
-          this.persona = data;  },
-        error: (e) => {
-          this.toastr.error(e.error.mensaje, 'Error CARGAR PERSONA', {timeOut: 3000,positionClass: 'toast-top-center' });
-          this.router.navigate(['/'])   }
-      }
-    );
+    this.personaServ.getPersona().subscribe({
+      next: (data) => {
+        this.persona = data;
+      },
+      error: (e) => {
+        this.toastr.error(e.error.mensaje, 'Error CARGAR PERSONA', {
+          timeOut: 3000,
+          positionClass: 'toast-top-center',
+        });
+        this.router.navigate(['/']);
+      },
+    });
   }
-
-
 }

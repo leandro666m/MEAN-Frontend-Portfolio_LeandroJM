@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: '',  component: AppComponent  },
-  { path: '**', redirectTo: 'portfolio', pathMatch: 'full'  }
+  { path: '**', redirectTo: '', pathMatch: 'full'  }
 ];
 
 

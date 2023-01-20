@@ -16,10 +16,16 @@ export class PersonaService {
   public getPersona(): Observable<any> {
     return this.httpCliente.get( this.URL + `getPersona`);
   }
-    
+  
   public editarPersona( id: number, persona: Persona ): Observable<any> {
     return this.httpCliente.put( this.URL + `editar/${id}`, persona );
   }
+  
+  /*  
+  public editarPersona( id: number, persona: Persona ): Observable<any> {
+    return this.httpCliente.put( this.URL + `editar/${id}`, persona );
+  }
+  */
 
   /*
   public getPersona(id: number): Observable<Persona> {
