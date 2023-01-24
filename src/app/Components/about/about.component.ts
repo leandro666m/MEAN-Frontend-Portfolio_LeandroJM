@@ -13,7 +13,7 @@ import { PersonaService } from 'src/app/Services/persona.service';
 export class AboutComponent implements OnInit {
   //@Input() isAdmin: boolean;
   @Input() persona: any;
-  @Input() id: number;
+  @Input() id: string;
   
   constructor( public personaServ: PersonaService, public offcanvasService: NgbOffcanvas, private toastr: ToastrService) { }
 

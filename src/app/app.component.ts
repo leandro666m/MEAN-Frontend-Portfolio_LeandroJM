@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   isAdmin = false;
   roles: string[] = [];
   persona: Persona[] = [];
-  id: number;
+  id: any;
 
   constructor(
     public personaServ: PersonaService,

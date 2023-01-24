@@ -1,5 +1,5 @@
 export class Persona {
-    id?: number;
+    _id?: string;
     nombre: string;
     comentario: string;
     telefono: string;
@@ -18,5 +18,6 @@ export class Persona {
         this.ciudad = ciudad;
         this.titulo = titulo;
     }
+    
     
  }
